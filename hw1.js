@@ -169,10 +169,18 @@ console.log(
  Create a new variable called totalCars and assign to it the total number of cars present in the carsForSale and carsForRent arrays.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let carsForSale = [carOne, carTwo, carThree];
+let totalCars = {
+  carsForRent: carsForRent.length,
+  carsForSale: carsForSale.length,
+};
 
+console.log(totalCars);
 /* EXERCISE 13
  Using a loop, print to the console all the data for each car in the carsForSale array.
 */
-
-/* WRITE YOUR ANSWER HERE */
+for (let i = 0; i < carsForSale.length; i++) {
+  console.log(carsForSale[i].brand);
+  console.log(carsForSale[i].model);
+  console.log(carsForSale[i].licensePlate);
+}
