@@ -113,23 +113,56 @@ console.log(
  Then clone it 5 times, and change the licensePlate for each cloned car without affecting the original one.
 */
 
+let car = { brand: "Audi", model: "A5", licensePlate: "ABC000" };
+
+let carOne = {};
+Object.assign(carOne, car);
+carOne.licensePlate = "ABC001";
+
+let carTwo = {};
+Object.assign(carTwo, car);
+carTwo.licensePlate = "ABC002";
+
+let carThree = {};
+Object.assign(carThree, car);
+carThree.licensePlate = "ABC003";
+
+let carFour = {};
+Object.assign(carFour, car);
+carFour.licensePlate = "ABC004";
+
+let carFive = {};
+Object.assign(carFive, car);
+carFive.licensePlate = "ABC005";
+
+console.log(car, carOne, carTwo, carThree, carFour, carFive);
 /* EXERCISE 9
  Create a variable called carsForRent and assign to it an array containing all the cars from the previous exercise.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let carsForRent = [carOne, carTwo, carThree, carFour, carFive];
+
+console.log(carsForRent);
 
 /* EXERCISE 10
  Remove the first and the last car from the carsForRent array.
 */
 
-/* WRITE YOUR ANSWER HERE */
+carsForRent.shift();
+carsForRent.pop();
+
+console.log(carsForRent);
 
 /* EXERCISE 11
  Print to the console the type of the car variable you created before, as well as the types of its licensePlate and brand properties.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log(
+  typeof car,
+  typeof car.brand,
+  typeof car.model,
+  typeof car.licensePlate
+);
 
 /* EXERCISE 12
  Create a new variable called carsForSale assigning to it an empty array, and then insert 3 cars into it.
